@@ -1,0 +1,8 @@
+import { createRoot } from "react-dom/client";
+import { ModuleRegistry, AllCommunityModule } from "ag-grid-community";
+import App from "./App";
+import "./index.css";
+
+ModuleRegistry.registerModules([AllCommunityModule]);
+
+createRoot(document.getElementById("root")!).render(<App />);
