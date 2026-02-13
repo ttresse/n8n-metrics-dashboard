@@ -46,9 +46,10 @@ export async function registerRoutes(
       const limit = parseInt(req.query.limit as string) || 100;
       const instance = req.query.instance as string | undefined;
 
+      // Select only needed columns - exclude bulky execution_data and workflow_data
       let query = client
         .from("n8n_execution_logs")
-        .select("*")
+        .select("id, execution_id, workflow_id, workflow_name, status, finished, started_at, finished_at, duration_ms, mode, node_count, error_message, created_at, n8n_instance")
         .order("created_at", { ascending: false })
         .limit(limit);
 

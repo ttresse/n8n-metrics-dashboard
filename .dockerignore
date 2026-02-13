@@ -1,0 +1,42 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files (handled by docker-compose)
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Replit specific
+.replit
+replit.md
+.replit.nix
+
+# Test files
+coverage
+*.test.*
+*.spec.*
+
+# Documentation
+*.md
+!README.md
