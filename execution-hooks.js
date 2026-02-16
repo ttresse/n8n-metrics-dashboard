@@ -131,7 +131,6 @@ module.exports = {
             {
               executionId,
               n8n_instance: getN8nInstance(),
-              n8n_instance: getN8nInstance(),
               workflowName: workflowData?.name,
               finished: fullRunData?.finished,
               status: fullRunData?.status,
